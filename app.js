@@ -894,74 +894,74 @@ function initThemeSelector() {
       '--color-accent-green': '#0F3D3B'
     },
     usa: {
-      '--bg-primary': '#F5F7FA',
-      '--bg-secondary': '#E8EEF5',
-      '--bg-glass': 'rgba(245, 247, 250, 0.78)',
-      '--border-glass': 'rgba(255, 255, 255, 0.85)',
-      '--border-light': 'rgba(11, 30, 54, 0.15)',
-      '--color-text': '#0B1E36',
-      '--color-text-secondary': '#3E526C',
+      '--bg-primary': '#E8EEF5',      /* Rich slate blue */
+      '--bg-secondary': '#D0DFEE',    /* Deeper navy-gray accent */
+      '--bg-glass': 'rgba(232, 238, 245, 0.85)',
+      '--border-glass': 'rgba(255, 255, 255, 0.9)',
+      '--border-light': 'rgba(6, 26, 51, 0.15)',
+      '--color-text': '#061A33',      /* Midnight Navy */
+      '--color-text-secondary': '#2C4360',
       '--color-accent-gold': '#C5A028',
       '--color-accent-gold-hover': '#AA8717',
-      '--color-accent-orange': '#C52A2A',
+      '--color-accent-orange': '#C52A2A', /* Crimson Red */
       '--color-accent-red': '#C52A2A',
-      '--color-accent-green': '#0B1E36'
+      '--color-accent-green': '#061A33'
     },
     india: {
-      '--bg-primary': '#FAF8F5',
-      '--bg-secondary': '#F7ECE1',
-      '--bg-glass': 'rgba(250, 248, 245, 0.78)',
-      '--border-glass': 'rgba(255, 255, 255, 0.85)',
-      '--border-light': 'rgba(22, 46, 36, 0.15)',
-      '--color-text': '#162E24',
-      '--color-text-secondary': '#475C53',
-      '--color-accent-gold': '#FF9933',
-      '--color-accent-gold-hover': '#E07E1B',
-      '--color-accent-orange': '#FF9933',
+      '--bg-primary': '#FFF5EB',      /* Soft Saffron Cream */
+      '--bg-secondary': '#FFE3CC',    /* Light Apricot Saffron */
+      '--bg-glass': 'rgba(255, 245, 235, 0.85)',
+      '--border-glass': 'rgba(255, 255, 255, 0.9)',
+      '--border-light': 'rgba(14, 53, 36, 0.15)',
+      '--color-text': '#0E3524',      /* Deep Green */
+      '--color-text-secondary': '#355346',
+      '--color-accent-gold': '#E67E22', /* Saffron Orange */
+      '--color-accent-gold-hover': '#C35E0B',
+      '--color-accent-orange': '#E67E22',
       '--color-accent-red': '#C52A2A',
-      '--color-accent-green': '#138808'
+      '--color-accent-green': '#1B8A5A'   /* Emerald green */
     },
     pakistan: {
-      '--bg-primary': '#F4F8F6',
-      '--bg-secondary': '#E4EFEA',
-      '--bg-glass': 'rgba(244, 248, 246, 0.78)',
-      '--border-glass': 'rgba(255, 255, 255, 0.85)',
-      '--border-light': 'rgba(11, 37, 24, 0.15)',
-      '--color-text': '#0B2518',
-      '--color-text-secondary': '#3E5C4E',
+      '--bg-primary': '#E6F2EC',      /* Mint Sage Green */
+      '--bg-secondary': '#C8E2D5',    /* Deeper Sage Green */
+      '--bg-glass': 'rgba(230, 242, 236, 0.85)',
+      '--border-glass': 'rgba(255, 255, 255, 0.9)',
+      '--border-light': 'rgba(6, 38, 21, 0.15)',
+      '--color-text': '#062615',      /* Deep Teal Pine Black */
+      '--color-text-secondary': '#274D3A',
       '--color-accent-gold': '#C5A028',
       '--color-accent-gold-hover': '#AA8717',
-      '--color-accent-orange': '#0F3D3B',
+      '--color-accent-orange': '#0D3E26',
       '--color-accent-red': '#A82424',
-      '--color-accent-green': '#01411C'
+      '--color-accent-green': '#10663C'   /* Pakistan Green */
     },
     uk: {
-      '--bg-primary': '#FAF9F6',
-      '--bg-secondary': '#E8ECF2',
-      '--bg-glass': 'rgba(250, 249, 246, 0.78)',
-      '--border-glass': 'rgba(255, 255, 255, 0.85)',
-      '--border-light': 'rgba(11, 28, 63, 0.15)',
-      '--color-text': '#0B1C3F',
-      '--color-text-secondary': '#4A5875',
+      '--bg-primary': '#F0F2F7',      /* Steel Blue White */
+      '--bg-secondary': '#D5DFEC',    /* Light Lavender Blue */
+      '--bg-glass': 'rgba(240, 242, 247, 0.85)',
+      '--border-glass': 'rgba(255, 255, 255, 0.9)',
+      '--border-light': 'rgba(11, 25, 56, 0.15)',
+      '--color-text': '#0B1938',      /* Royal Navy */
+      '--color-text-secondary': '#2F3E5E',
       '--color-accent-gold': '#D4AF37',
       '--color-accent-gold-hover': '#AA8717',
-      '--color-accent-orange': '#C8102E',
-      '--color-accent-red': '#C8102E',
-      '--color-accent-green': '#0B1C3F'
+      '--color-accent-orange': '#D0102F', /* Union Jack Crimson */
+      '--color-accent-red': '#D0102F',
+      '--color-accent-green': '#0B1938'
     },
     japan: {
-      '--bg-primary': '#FFFFFF',
-      '--bg-secondary': '#F9F9F9',
-      '--bg-glass': 'rgba(255, 255, 255, 0.82)',
-      '--border-glass': 'rgba(255, 255, 255, 0.85)',
-      '--border-light': 'rgba(26, 26, 26, 0.15)',
-      '--color-text': '#1A1A1A',
-      '--color-text-secondary': '#5A5A5A',
-      '--color-accent-gold': '#BC002D',
+      '--bg-primary': '#FFF0F2',      /* Sakura Rose Pink */
+      '--bg-secondary': '#FFE0E5',    /* Delicate Rose Accent */
+      '--bg-glass': 'rgba(255, 240, 242, 0.85)',
+      '--border-glass': 'rgba(255, 255, 255, 0.9)',
+      '--border-light': 'rgba(42, 16, 21, 0.15)',
+      '--color-text': '#2A1015',      /* Deep Cherry Black */
+      '--color-text-secondary': '#6A3A42',
+      '--color-accent-gold': '#BC002D', /* Japanese Crimson Sun */
       '--color-accent-gold-hover': '#900022',
       '--color-accent-orange': '#BC002D',
       '--color-accent-red': '#BC002D',
-      '--color-accent-green': '#1A1A1A'
+      '--color-accent-green': '#2A1015'
     }
   };
 
