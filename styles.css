@@ -183,6 +183,50 @@ a {
   stroke-width: 1.5;
 }
 
+/* Flag Theme Selector Widget */
+.flag-theme-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(10, 10, 10, 0.04);
+  padding: 4px;
+  border-radius: 99px;
+  border: 1px solid rgba(10, 10, 10, 0.05);
+  margin-right: 4px;
+}
+
+.flag-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  border: 1.5px solid transparent;
+  overflow: hidden;
+  background: transparent;
+  padding: 0;
+  outline: none;
+}
+
+.flag-btn svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.flag-btn:hover {
+  transform: scale(1.15);
+}
+
+.flag-btn.active {
+  border-color: var(--color-accent-gold);
+  box-shadow: var(--shadow-sm);
+  background: #FFFFFF;
+}
+
 /* Navigation Links */
 .nav-menu {
   display: flex;

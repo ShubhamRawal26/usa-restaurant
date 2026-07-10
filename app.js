@@ -197,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallaxHero();
   initMap();
   setupKeyboardShortcuts();
+  initThemeSelector();
 });
 
 // 2. Sticky Header Shrink
@@ -871,4 +872,118 @@ function showToast(title, message, type = 'info') {
       el.remove();
     }, 500);
   }
+}
+
+// 14. Flag-based Theme Selector Widget
+function initThemeSelector() {
+  const flagButtons = document.querySelectorAll('.flag-btn');
+  
+  const THEME_MAP = {
+    default: {
+      '--bg-primary': '#FAF9F5',
+      '--bg-secondary': '#F0EDE6',
+      '--bg-glass': 'rgba(250, 249, 245, 0.78)',
+      '--border-glass': 'rgba(255, 255, 255, 0.85)',
+      '--border-light': 'rgba(15, 61, 59, 0.15)',
+      '--color-text': '#0E1A19',
+      '--color-text-secondary': '#405250',
+      '--color-accent-gold': '#C5A028',
+      '--color-accent-gold-hover': '#AA8717',
+      '--color-accent-orange': '#D9531E',
+      '--color-accent-red': '#A82424',
+      '--color-accent-green': '#0F3D3B'
+    },
+    usa: {
+      '--bg-primary': '#F5F7FA',
+      '--bg-secondary': '#E8EEF5',
+      '--bg-glass': 'rgba(245, 247, 250, 0.78)',
+      '--border-glass': 'rgba(255, 255, 255, 0.85)',
+      '--border-light': 'rgba(11, 30, 54, 0.15)',
+      '--color-text': '#0B1E36',
+      '--color-text-secondary': '#3E526C',
+      '--color-accent-gold': '#C5A028',
+      '--color-accent-gold-hover': '#AA8717',
+      '--color-accent-orange': '#C52A2A',
+      '--color-accent-red': '#C52A2A',
+      '--color-accent-green': '#0B1E36'
+    },
+    india: {
+      '--bg-primary': '#FAF8F5',
+      '--bg-secondary': '#F7ECE1',
+      '--bg-glass': 'rgba(250, 248, 245, 0.78)',
+      '--border-glass': 'rgba(255, 255, 255, 0.85)',
+      '--border-light': 'rgba(22, 46, 36, 0.15)',
+      '--color-text': '#162E24',
+      '--color-text-secondary': '#475C53',
+      '--color-accent-gold': '#FF9933',
+      '--color-accent-gold-hover': '#E07E1B',
+      '--color-accent-orange': '#FF9933',
+      '--color-accent-red': '#C52A2A',
+      '--color-accent-green': '#138808'
+    },
+    pakistan: {
+      '--bg-primary': '#F4F8F6',
+      '--bg-secondary': '#E4EFEA',
+      '--bg-glass': 'rgba(244, 248, 246, 0.78)',
+      '--border-glass': 'rgba(255, 255, 255, 0.85)',
+      '--border-light': 'rgba(11, 37, 24, 0.15)',
+      '--color-text': '#0B2518',
+      '--color-text-secondary': '#3E5C4E',
+      '--color-accent-gold': '#C5A028',
+      '--color-accent-gold-hover': '#AA8717',
+      '--color-accent-orange': '#0F3D3B',
+      '--color-accent-red': '#A82424',
+      '--color-accent-green': '#01411C'
+    },
+    uk: {
+      '--bg-primary': '#FAF9F6',
+      '--bg-secondary': '#E8ECF2',
+      '--bg-glass': 'rgba(250, 249, 246, 0.78)',
+      '--border-glass': 'rgba(255, 255, 255, 0.85)',
+      '--border-light': 'rgba(11, 28, 63, 0.15)',
+      '--color-text': '#0B1C3F',
+      '--color-text-secondary': '#4A5875',
+      '--color-accent-gold': '#D4AF37',
+      '--color-accent-gold-hover': '#AA8717',
+      '--color-accent-orange': '#C8102E',
+      '--color-accent-red': '#C8102E',
+      '--color-accent-green': '#0B1C3F'
+    },
+    japan: {
+      '--bg-primary': '#FFFFFF',
+      '--bg-secondary': '#F9F9F9',
+      '--bg-glass': 'rgba(255, 255, 255, 0.82)',
+      '--border-glass': 'rgba(255, 255, 255, 0.85)',
+      '--border-light': 'rgba(26, 26, 26, 0.15)',
+      '--color-text': '#1A1A1A',
+      '--color-text-secondary': '#5A5A5A',
+      '--color-accent-gold': '#BC002D',
+      '--color-accent-gold-hover': '#900022',
+      '--color-accent-orange': '#BC002D',
+      '--color-accent-red': '#BC002D',
+      '--color-accent-green': '#1A1A1A'
+    }
+  };
+
+  flagButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const selectedTheme = btn.dataset.theme;
+      const themeColors = THEME_MAP[selectedTheme];
+
+      if (!themeColors) return;
+
+      // Update active class
+      flagButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Update CSS Variables dynamically
+      Object.entries(themeColors).forEach(([variable, value]) => {
+        document.documentElement.style.setProperty(variable, value);
+      });
+
+      // Show tactile macOS toast feedback
+      const label = btn.getAttribute('title') || 'Theme';
+      showToast('Theme Updated', `Switched to the ${label}.`, 'success');
+    });
+  });
 }
