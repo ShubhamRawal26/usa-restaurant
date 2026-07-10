@@ -877,93 +877,112 @@ function showToast(title, message, type = 'info') {
 // 14. Flag-based Theme Selector Widget
 function initThemeSelector() {
   const flagButtons = document.querySelectorAll('.flag-btn');
+  const capsule = document.querySelector('.flag-sliding-capsule');
   
   const THEME_MAP = {
     default: {
-      '--bg-primary': '#FAF9F5',
-      '--bg-secondary': '#F0EDE6',
-      '--bg-glass': 'rgba(250, 249, 245, 0.78)',
-      '--border-glass': 'rgba(255, 255, 255, 0.85)',
-      '--border-light': 'rgba(15, 61, 59, 0.15)',
-      '--color-text': '#0E1A19',
-      '--color-text-secondary': '#405250',
+      '--bg-primary': '#0B1312',
+      '--bg-secondary': '#152220',
+      '--bg-glass': 'rgba(255, 255, 255, 0.08)',
+      '--border-glass': 'rgba(255, 255, 255, 0.15)',
+      '--border-light': 'rgba(255, 255, 255, 0.08)',
+      '--color-text': '#FAF9F5',
+      '--color-text-secondary': '#C5CECC',
       '--color-accent-gold': '#C5A028',
       '--color-accent-gold-hover': '#AA8717',
       '--color-accent-orange': '#D9531E',
       '--color-accent-red': '#A82424',
-      '--color-accent-green': '#0F3D3B'
+      '--color-accent-green': '#0F3D3B',
+      '--bg-gradient': 'linear-gradient(135deg, #091D1B 0%, #152B28 50%, #071514 100%)'
     },
     usa: {
-      '--bg-primary': '#E8EEF5',      /* Rich slate blue */
-      '--bg-secondary': '#D0DFEE',    /* Deeper navy-gray accent */
-      '--bg-glass': 'rgba(232, 238, 245, 0.85)',
-      '--border-glass': 'rgba(255, 255, 255, 0.9)',
-      '--border-light': 'rgba(6, 26, 51, 0.15)',
-      '--color-text': '#061A33',      /* Midnight Navy */
-      '--color-text-secondary': '#2C4360',
-      '--color-accent-gold': '#C5A028',
-      '--color-accent-gold-hover': '#AA8717',
-      '--color-accent-orange': '#C52A2A', /* Crimson Red */
-      '--color-accent-red': '#C52A2A',
-      '--color-accent-green': '#061A33'
+      '--bg-primary': '#06101E',
+      '--bg-secondary': '#10213B',
+      '--bg-glass': 'rgba(255, 255, 255, 0.08)',
+      '--border-glass': 'rgba(255, 255, 255, 0.15)',
+      '--border-light': 'rgba(255, 255, 255, 0.08)',
+      '--color-text': '#F0F4F8',
+      '--color-text-secondary': '#BAC8D9',
+      '--color-accent-gold': '#D4AF37',
+      '--color-accent-gold-hover': '#C5A028',
+      '--color-accent-orange': '#E03E3E',
+      '--color-accent-red': '#E03E3E',
+      '--color-accent-green': '#3A6073',
+      '--bg-gradient': 'linear-gradient(135deg, #051329 0%, #152C4E 50%, #4A121A 100%)'
     },
     india: {
-      '--bg-primary': '#FFF5EB',      /* Soft Saffron Cream */
-      '--bg-secondary': '#FFE3CC',    /* Light Apricot Saffron */
-      '--bg-glass': 'rgba(255, 245, 235, 0.85)',
-      '--border-glass': 'rgba(255, 255, 255, 0.9)',
-      '--border-light': 'rgba(14, 53, 36, 0.15)',
-      '--color-text': '#0E3524',      /* Deep Green */
-      '--color-text-secondary': '#355346',
-      '--color-accent-gold': '#E67E22', /* Saffron Orange */
-      '--color-accent-gold-hover': '#C35E0B',
-      '--color-accent-orange': '#E67E22',
+      '--bg-primary': '#1C130D',
+      '--bg-secondary': '#2E1E12',
+      '--bg-glass': 'rgba(255, 255, 255, 0.08)',
+      '--border-glass': 'rgba(255, 255, 255, 0.15)',
+      '--border-light': 'rgba(255, 255, 255, 0.08)',
+      '--color-text': '#FAF6F0',
+      '--color-text-secondary': '#DFD5C6',
+      '--color-accent-gold': '#FF9933',
+      '--color-accent-gold-hover': '#E07E1B',
+      '--color-accent-orange': '#FF9933',
       '--color-accent-red': '#C52A2A',
-      '--color-accent-green': '#1B8A5A'   /* Emerald green */
+      '--color-accent-green': '#138808',
+      '--bg-gradient': 'linear-gradient(135deg, #4A1E05 0%, #1A281F 50%, #052613 100%)'
     },
     pakistan: {
-      '--bg-primary': '#E6F2EC',      /* Mint Sage Green */
-      '--bg-secondary': '#C8E2D5',    /* Deeper Sage Green */
-      '--bg-glass': 'rgba(230, 242, 236, 0.85)',
-      '--border-glass': 'rgba(255, 255, 255, 0.9)',
-      '--border-light': 'rgba(6, 38, 21, 0.15)',
-      '--color-text': '#062615',      /* Deep Teal Pine Black */
-      '--color-text-secondary': '#274D3A',
-      '--color-accent-gold': '#C5A028',
-      '--color-accent-gold-hover': '#AA8717',
-      '--color-accent-orange': '#0D3E26',
+      '--bg-primary': '#03170C',
+      '--bg-secondary': '#0C2B18',
+      '--bg-glass': 'rgba(255, 255, 255, 0.08)',
+      '--border-glass': 'rgba(255, 255, 255, 0.15)',
+      '--border-light': 'rgba(255, 255, 255, 0.08)',
+      '--color-text': '#EBF5EF',
+      '--color-text-secondary': '#B2CFC0',
+      '--color-accent-gold': '#D4AF37',
+      '--color-accent-gold-hover': '#C5A028',
+      '--color-accent-orange': '#138808',
       '--color-accent-red': '#A82424',
-      '--color-accent-green': '#10663C'   /* Pakistan Green */
+      '--color-accent-green': '#01411C',
+      '--bg-gradient': 'linear-gradient(135deg, #02200E 0%, #053319 50%, #0E4728 100%)'
     },
     uk: {
-      '--bg-primary': '#F0F2F7',      /* Steel Blue White */
-      '--bg-secondary': '#D5DFEC',    /* Light Lavender Blue */
-      '--bg-glass': 'rgba(240, 242, 247, 0.85)',
-      '--border-glass': 'rgba(255, 255, 255, 0.9)',
-      '--border-light': 'rgba(11, 25, 56, 0.15)',
-      '--color-text': '#0B1938',      /* Royal Navy */
-      '--color-text-secondary': '#2F3E5E',
+      '--bg-primary': '#050E1E',
+      '--bg-secondary': '#0D1D3A',
+      '--bg-glass': 'rgba(255, 255, 255, 0.08)',
+      '--border-glass': 'rgba(255, 255, 255, 0.15)',
+      '--border-light': 'rgba(255, 255, 255, 0.08)',
+      '--color-text': '#F0F3F7',
+      '--color-text-secondary': '#BAC5D9',
       '--color-accent-gold': '#D4AF37',
-      '--color-accent-gold-hover': '#AA8717',
-      '--color-accent-orange': '#D0102F', /* Union Jack Crimson */
+      '--color-accent-gold-hover': '#C5A028',
+      '--color-accent-orange': '#D0102F',
       '--color-accent-red': '#D0102F',
-      '--color-accent-green': '#0B1938'
+      '--color-accent-green': '#102142',
+      '--bg-gradient': 'linear-gradient(135deg, #081226 0%, #102142 50%, #3B0912 100%)'
     },
     japan: {
-      '--bg-primary': '#FFF0F2',      /* Sakura Rose Pink */
-      '--bg-secondary': '#FFE0E5',    /* Delicate Rose Accent */
-      '--bg-glass': 'rgba(255, 240, 242, 0.85)',
-      '--border-glass': 'rgba(255, 255, 255, 0.9)',
-      '--border-light': 'rgba(42, 16, 21, 0.15)',
-      '--color-text': '#2A1015',      /* Deep Cherry Black */
-      '--color-text-secondary': '#6A3A42',
-      '--color-accent-gold': '#BC002D', /* Japanese Crimson Sun */
+      '--bg-primary': '#1A0A0D',
+      '--bg-secondary': '#2E1218',
+      '--bg-glass': 'rgba(255, 255, 255, 0.08)',
+      '--border-glass': 'rgba(255, 255, 255, 0.15)',
+      '--border-light': 'rgba(255, 255, 255, 0.08)',
+      '--color-text': '#FFF0F2',
+      '--color-text-secondary': '#E6C3C9',
+      '--color-accent-gold': '#BC002D',
       '--color-accent-gold-hover': '#900022',
       '--color-accent-orange': '#BC002D',
       '--color-accent-red': '#BC002D',
-      '--color-accent-green': '#2A1015'
+      '--color-accent-green': '#2A1015',
+      '--bg-gradient': 'linear-gradient(135deg, #1C0A0D 0%, #3C1016 50%, #4D000C 100%)'
     }
   };
+
+  // Align sliding capsule with initial active button
+  function alignCapsule() {
+    const activeBtn = document.querySelector('.flag-btn.active');
+    if (capsule && activeBtn) {
+      const containerPadding = 3;
+      capsule.style.transform = `translateX(${activeBtn.offsetLeft - containerPadding}px)`;
+    }
+  }
+
+  // Initial call on load
+  setTimeout(alignCapsule, 150);
 
   flagButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -976,14 +995,19 @@ function initThemeSelector() {
       flagButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
+      // Shift slide capsule smoothly
+      if (capsule) {
+        const containerPadding = 3;
+        capsule.style.transform = `translateX(${btn.offsetLeft - containerPadding}px)`;
+      }
+
       // Update CSS Variables dynamically
       Object.entries(themeColors).forEach(([variable, value]) => {
         document.documentElement.style.setProperty(variable, value);
       });
-
-      // Show tactile macOS toast feedback
-      const label = btn.getAttribute('title') || 'Theme';
-      showToast('Theme Updated', `Switched to the ${label}.`, 'success');
     });
   });
+
+  // Re-align capsule if windows resizing changes offsets
+  window.addEventListener('resize', alignCapsule);
 }
