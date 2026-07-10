@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L’Étoile Gastronomy | Premium Luxury Fine Dining USA</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Experience extraordinary dining at L’Étoile Gastronomy. Discover hand-crafted culinary masterpieces, fresh organic ingredients, and a world-class luxury atmosphere in the heart of New York.">
+  <meta name="keywords" content="Luxury Restaurant, Fine Dining USA, Michelin Star New York, Premium Bistro, Table Reservation, Truffle Gastronomy, Luxury Catering">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="L’Étoile Gastronomy | Premium Luxury Fine Dining USA">
+  <meta property="og:description" content="Experience extraordinary dining. Hand-crafted culinary masterpieces and premium atmosphere.">
+  <meta property="og:image" content="assets/images/hero_dish.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="L’Étoile Gastronomy | Premium Luxury Fine Dining USA">
+  <meta property="twitter:description" content="Experience extraordinary dining. Hand-crafted culinary masterpieces and premium atmosphere.">
+  <meta property="twitter:image" content="assets/images/hero_dish.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP Animation Engine CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Schema.org JSON-LD structured data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "L’Étoile Gastronomy",
+      "image": "assets/images/hero_dish.png",
+      "priceRange": "$$$$",
+      "telephone": "+1-212-555-0199",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "725 Fifth Avenue",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10022",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7624,
+        "longitude": -73.9738
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "11:00",
+          "closes": "23:00"
+        }
+      ],
+      "servesCuisine": [
+        "Modern French",
+        "American Fine Dining",
+        "Steakhouse",
+        "Caviar & Seafood"
+      ]
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Floating Ambient Aurora Canvas -->
+  <div class="aurora-bg">
+    <div class="aurora-glow glow-1"></div>
+    <div class="aurora-glow glow-2"></div>
+    <div class="aurora-glow glow-3"></div>
+  </div>
+
+  <!-- Sticky Glass Navigation Header -->
+  <header class="header">
+    <a href="#home" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+        <line x1="12" y1="22" x2="12" y2="15.5"></line>
+        <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+        <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+        <line x1="12" y1="2" x2="12" y2="8.5"></line>
+      </svg>
+      L’Étoile<span>.</span>
+    </a>
+    <nav>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#home" class="active">Home</a></li>
+        <li class="nav-item"><a href="#features">Experience</a></li>
+        <li class="nav-item"><a href="#menu">Menu</a></li>
+        <li class="nav-item"><a href="#about">Our Story</a></li>
+        <li class="nav-item"><a href="#reservations">Reservations</a></li>
+        <li class="nav-item"><a href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a href="#catering">Catering</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <!-- Cmd+K Spotlight Search button -->
+      <button class="btn btn-secondary trigger-cmd" style="padding: 10px;" aria-label="Search Palette">
+        <i data-lucide="search" style="width: 18px; height: 18px;"></i>
+      </button>
+      <a href="#reservations" class="btn btn-primary">Reserve Table</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-tag">
+          <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+          Michelin Fine Dining USA
+        </div>
+        <h1 class="hero-title">
+          Experience Extra-
+          <span>ordinary Dining.</span>
+        </h1>
+        <p class="hero-desc">
+          Indulge in a premium symphony of artisan flavors, sustainably sourced premium ingredients, and a sophisticated atmosphere sculpted for luxury culinary epicures.
+        </p>
+        <div class="hero-actions">
+          <a href="#reservations" class="btn btn-gold">
+            Reserve Table
+            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+          </a>
+          <a href="#menu" class="btn btn-secondary">Explore Menu</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="dish-glow-back"></div>
+        <div class="dish-image-wrapper">
+          <img src="assets/images/hero_dish.png" alt="Signature Gastronomy Plate" class="hero-dish-img">
+        </div>
+        <!-- Floating Glass Widget Cards -->
+        <div class="floating-glass-card fgc-1">
+          <div class="fgc-icon">
+            <i data-lucide="clock" style="width: 20px; height: 20px;"></i>
+          </div>
+          <div class="fgc-info">
+            <h4>Hours</h4>
+            <p>11:00 AM - 11:00 PM</p>
+          </div>
+        </div>
+        <div class="floating-glass-card fgc-2">
+          <div class="fgc-icon">
+            <i data-lucide="map-pin" style="width: 20px; height: 20px;"></i>
+          </div>
+          <div class="fgc-info">
+            <h4>New York City</h4>
+            <p>Fifth Avenue, Manhattan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Aesthetic & Taste</span>
+        <h2 class="section-title">A Symphony of Exclusivity</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="leaf"></i>
+          </div>
+          <h3>Fresh Ingredients</h3>
+          <p>Hand-selected botanicals, locally sourced organic produce, and premium imported truffles, Caviar, and Wagyu.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="user-check"></i>
+          </div>
+          <h3>Master Chefs</h3>
+          <p>Crafted under the visionary direction of Award-Winning Master Chefs bringing elite Michelin background expertise.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="award"></i>
+          </div>
+          <h3>Award Winning</h3>
+          <p>Lauded as a premier gastronomy sanctuary in the United States, earning multi-star culinary excellence certifications.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="glass-water"></i>
+          </div>
+          <h3>Private Dining</h3>
+          <p>Stunning private glass lounges for exclusive family banquets, corporate meetings, and romantic proposals.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="calendar"></i>
+          </div>
+          <h3>Fast Reservations</h3>
+          <p>Smooth, instant digital reservation system designed to secure your prime dinner table tables under 60 seconds.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i data-lucide="crown"></i>
+          </div>
+          <h3>Premium Experience</h3>
+          <p>Apple-inspired design philosophy, custom warm lighting, glass screens, and buttery customer satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Showcase Section -->
+  <section id="signature" class="section-padding" style="background: rgba(16, 16, 16, 0.01); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Chef Recommended</span>
+        <h2 class="section-title">Signature Masterpieces</h2>
+      </div>
+      <div class="signature-showcase">
+        <div class="signature-card">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Wagyu Ribeye Steak" class="signature-image">
+          <div class="signature-info">
+            <div style="color:var(--color-accent-gold); font-size: 0.8rem; font-weight:700; margin-bottom:10px; text-transform:uppercase;">Luxury Steak</div>
+            <h3 style="font-size:1.6rem; margin-bottom:12px;">Dry-Aged Tomahawk</h3>
+            <p style="color:var(--color-text-secondary); font-size:0.85rem; margin-bottom:24px;">Dry-aged for 45 days, seared over charcoal wood fire, served with gold flakes and rich bordelaise reduction.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size: 1.5rem; font-weight:700; color:var(--color-text);">$135</span>
+              <a href="#reservations" class="btn btn-primary" style="padding:10px 16px; font-size:0.8rem;">Reserve Dining</a>
+            </div>
+          </div>
+        </div>
+        <div class="signature-card">
+          <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80" alt="Seabass Plating" class="signature-image">
+          <div class="signature-info">
+            <div style="color:var(--color-accent-gold); font-size: 0.8rem; font-weight:700; margin-bottom:10px; text-transform:uppercase;">Ocean Catch</div>
+            <h3 style="font-size:1.6rem; margin-bottom:12px;">Chilean Seabass</h3>
+            <p style="color:var(--color-text-secondary); font-size:0.85rem; margin-bottom:24px;">Pan-seared Chilean seabass in aromatic saffron lobster stock, ginger glazed baby bok choy.</p>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size: 1.5rem; font-weight:700; color:var(--color-text);">$58</span>
+              <a href="#reservations" class="btn btn-primary" style="padding:10px 16px; font-size:0.8rem;">Reserve Dining</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Section -->
+  <section id="menu" class="section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Taste of luxury</span>
+        <h2 class="section-title">The Culinary Canvas</h2>
+      </div>
+      
+      <!-- Interactive Menu Search and Category Controls -->
+      <div class="menu-controls">
+        <div class="menu-search-wrapper">
+          <i data-lucide="search" class="menu-search-icon" style="width: 20px; height: 20px;"></i>
+          <input type="text" id="menu-search" class="menu-search-input" placeholder="Search our culinary canvas (e.g. Truffle, Seabass)...">
+        </div>
+        <div class="menu-tabs">
+          <button class="menu-tab-btn active" data-category="all">All Selections</button>
+          <button class="menu-tab-btn" data-category="breakfast">Breakfast</button>
+          <button class="menu-tab-btn" data-category="lunch">Lunch</button>
+          <button class="menu-tab-btn" data-category="dinner">Dinner</button>
+          <button class="menu-tab-btn" data-category="desserts">Desserts</button>
+          <button class="menu-tab-btn" data-category="drinks">Drinks</button>
+          <button class="menu-tab-btn" data-category="steaks">Steaks</button>
+          <button class="menu-tab-btn" data-category="seafood">Seafood</button>
+          <button class="menu-tab-btn" data-category="pizza">Pizza</button>
+          <button class="menu-tab-btn" data-category="pasta">Pasta</button>
+          <button class="menu-tab-btn" data-category="burgers">Burgers</button>
+          <button class="menu-tab-btn" data-category="sushi">Sushi</button>
+          <button class="menu-tab-btn" data-category="vegetarian">Vegetarian</button>
+        </div>
+      </div>
+
+      <!-- Dynamically Rendered Grid -->
+      <div id="menu-grid" class="menu-grid">
+        <!-- JS inserts cards or skeletons here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section / Chef Profile -->
+  <section id="about" class="section-padding" style="background: var(--bg-secondary); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container about-grid">
+      <div class="about-images">
+        <img src="assets/images/chef_profile.png" alt="Executive Chef Portrait" class="chef-img-frame">
+        <div class="about-card-overlap">
+          <h4>Chef Jean-Luc</h4>
+          <p>Awarded Chef of the Year (USA Fine Dining Council 2025)</p>
+        </div>
+      </div>
+      <div>
+        <span class="section-tag">Behind the Scenes</span>
+        <h2 class="section-title" style="margin-bottom:24px;">An Art Form, Perfected Over Generations</h2>
+        <p style="color: var(--color-text-secondary); font-size: 1rem; margin-bottom: 20px;">
+          L’Étoile was founded in Manhattan with a singular vision: to craft a dining environment where technology and gastronomy merge into a seamless masterpiece. Guided by Chef Jean-Luc, we push structural bounds of fine-dining.
+        </p>
+        <p style="color: var(--color-text-secondary); font-size: 1rem;">
+          Our timeline is one of absolute dedication to high-end standards:
+        </p>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="timeline-year">2018</div>
+            <div class="timeline-content">
+              <h4>Founding in Manhattan</h4>
+              <p>L’Étoile opened its doors with a simple glass parlor and modular wood design.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2021</div>
+            <div class="timeline-content">
+              <h4>First Michelin Recognition</h4>
+              <p>Acclaimed for our Truffle Scrambled Eggs and sustainable coastal seafood sourcing.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-content">
+              <h4>macOS Experience Design Re-Launch</h4>
+              <p>Integrated state-of-the-art transparent systems to construct an premium workspace for food lovers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation System Section -->
+  <section id="reservations" class="section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Booking concierge</span>
+        <h2 class="section-title">Reserve Your Table</h2>
+      </div>
+      
+      <!-- macOS UI inspired glass booking form -->
+      <div class="reservation-box">
+        <form id="booking-form">
+          <div class="booking-form-grid">
+            <div class="form-group">
+              <label for="guest-name" class="form-label">Full Name</label>
+              <input type="text" id="guest-name" class="form-input" placeholder="e.g. Johnathan Sterling" required>
+            </div>
+            <div class="form-group">
+              <label for="guest-phone" class="form-label">Phone Number</label>
+              <input type="tel" id="guest-phone" class="form-input" placeholder="e.g. +1 (212) 555-0199" required>
+            </div>
+            <div class="form-group">
+              <label for="guest-email" class="form-label">Email Address</label>
+              <input type="email" id="guest-email" class="form-input" placeholder="e.g. sterling@icloud.com" required>
+            </div>
+            <div class="form-group">
+              <label for="guest-count" class="form-label">Number of Guests</label>
+              <select id="guest-count" class="form-input" required>
+                <option value="2">2 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="8">8+ Guests (Private Lounge)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="booking-date" class="form-label">Date</label>
+              <input type="date" id="booking-date" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="booking-time" class="form-label">Select Hour</label>
+              <input type="time" id="booking-time" class="form-input" min="11:00" max="22:00" required>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="guest-request" class="form-label">Special Requests & Dietary Accommodations</label>
+              <input type="text" id="guest-request" class="form-input" placeholder="e.g. Gluten allergy, window-side table, birthday celebration toast">
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-gold" style="width: 100%; max-width: 320px;">Secure Reservation</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="section-padding" style="background: rgba(16, 16, 16, 0.01); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Visual Showcase</span>
+        <h2 class="section-title">Interior & Plating Craft</h2>
+      </div>
+      <!-- Masonry Grid Layout -->
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-col-2 gallery-row-2">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Main Glass Lobby" loading="lazy">
+          <div class="gallery-overlay">Main Dining Lobby</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=600&q=80" alt="Plated Salmon Gastronomy" loading="lazy">
+          <div class="gallery-overlay">Salmon Plating</div>
+        </div>
+        <div class="gallery-item gallery-row-2">
+          <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=600&q=80" alt="Private Glass Bar" loading="lazy">
+          <div class="gallery-overlay">Cognac & Wine Cellar</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Chef Preparing Dish" loading="lazy">
+          <div class="gallery-overlay">Kitchen Precision</div>
+        </div>
+        <div class="gallery-item gallery-col-2">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Table Setting" loading="lazy">
+          <div class="gallery-overlay">Table Setting</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catering Section -->
+  <section id="catering" class="section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Exclusive Events</span>
+        <h2 class="section-title">Luxury Catering Concierge</h2>
+      </div>
+      <div class="catering-grid">
+        <div class="catering-card">
+          <div style="color:var(--color-accent-gold); margin-bottom:16px;">
+            <i data-lucide="building-2" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3>Corporate Banquets</h3>
+          <p>Impress board partners with state-of-the-art gourmet buffets, premium champagne servers, and flawless presentation.</p>
+        </div>
+        <div class="catering-card">
+          <div style="color:var(--color-accent-gold); margin-bottom:16px;">
+            <i data-lucide="cake" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3>Celebration Galas</h3>
+          <p>Bespoke custom menu items, elegant plating, and custom cocktail designs styled for your family milestones.</p>
+        </div>
+        <div class="catering-card">
+          <div style="color:var(--color-accent-gold); margin-bottom:16px;">
+            <i data-lucide="heart" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3>Wedding Fine Dining</h3>
+          <p>Exquisite multi-course Michelin tasting menus paired perfectly with rare vintage wines under stellar glass tents.</p>
+        </div>
+        <div class="catering-card">
+          <div style="color:var(--color-accent-gold); margin-bottom:16px;">
+            <i data-lucide="sparkles" style="width: 32px; height: 32px;"></i>
+          </div>
+          <h3>Private Dining Lounges</h3>
+          <p>Secure the ultimate luxury, where our master chefs prepare visual gastronomical art directly in your home space.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Carousel Section -->
+  <section id="testimonials" class="section-padding" style="background: rgba(16, 16, 16, 0.01); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">verified Critiques</span>
+        <h2 class="section-title">Customer Chronicles</h2>
+      </div>
+      
+      <div class="testimonial-carousel-wrapper">
+        <div class="testimonial-track">
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              </div>
+              <p class="testimonial-quote">"The Wagyu Tomahawk was transcendental. The glassmorphic design and Command Palette navigation match their modern culinary vision."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">MS</div>
+                <div class="author-info">
+                  <h5>Marcus Sterling</h5>
+                  <span class="badge-verified">
+                    <i data-lucide="check-circle" style="width:12px; height:12px;"></i> Verified Patron
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              </div>
+              <p class="testimonial-quote">"An absolute triumph. Booking online took less than 30 seconds. The osetra caviar benedict is a breakfast culinary dream."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">EL</div>
+                <div class="author-info">
+                  <h5>Elena Laurent</h5>
+                  <span class="badge-verified">
+                    <i data-lucide="check-circle" style="width:12px; height:12px;"></i> Verified Patron
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <button class="carousel-dot active" data-slide="0"></button>
+          <button class="carousel-dot" data-slide="1"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Counters Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="stats-grid text-center">
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="15000">0+</h3>
+          <p>Happy Customers</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="9800">0+</h3>
+          <p>Reservations Served</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="12">0</h3>
+          <p>Culinary Awards</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="stat-number" data-target="8">0</h3>
+          <p>Years of Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section id="faq" class="section-padding" style="background: var(--bg-secondary); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Help Desk</span>
+        <h2 class="section-title">Common Inquiries</h2>
+      </div>
+      
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-header">
+            Do you accommodate gluten-free or plant-based dietary requirements?
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-body">
+            <div class="faq-content">
+              Yes, our fine-dining menus feature custom gluten-free, vegan, and nut-allergy notations. Please mention requirements inside our digital booking form.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">
+            What is your restaurant's dress code policy?
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-body">
+            <div class="faq-content">
+              We maintain a premium smart-casual dress code. Collared shirts are suggested, and sportswear is discouraged in our main dining hall.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">
+            How far in advance can we book a private dining lounge?
+            <i data-lucide="chevron-down" class="faq-icon"></i>
+          </div>
+          <div class="faq-body">
+            <div class="faq-content">
+              Reservations for private event lounges open up to 90 days in advance. Call our concierge line or schedule directly through the app portal.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="newsletter-box">
+        <h2>Join L’Étoile Club</h2>
+        <p>Subscribe to receive high-end invites to secret tasting menus, recipes, and seasonal event priorities.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+          <input type="email" class="form-input" placeholder="Enter your premium email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Map Section -->
+  <section id="contact" class="section-padding" style="background: var(--bg-secondary); border-top: 1px solid var(--border-light);">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <div>
+          <span class="section-tag">Visit Us</span>
+          <h2 class="section-title" style="margin-bottom:20px;">L’Étoile NYC</h2>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <i data-lucide="map-pin"></i>
+          </div>
+          <div class="info-details">
+            <h3>Address</h3>
+            <p>725 Fifth Avenue, Midtown Manhattan, New York, NY 10022</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <i data-lucide="phone"></i>
+          </div>
+          <div class="info-details">
+            <h3>Reservations Line</h3>
+            <p>+1 (212) 555-0199</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <i data-lucide="mail"></i>
+          </div>
+          <div class="info-details">
+            <h3>General Inquiries</h3>
+            <p>concierge@letoile-gastronomy.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <i data-lucide="clock"></i>
+          </div>
+          <div class="info-details">
+            <h3>Operating Hours</h3>
+            <p>Daily: 11:00 AM - 11:00 PM</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Canvas interactive vector Map container -->
+      <div class="map-canvas-container" id="luxury-map-canvas">
+        <!-- Canvas renders here via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxury Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+              <line x1="12" y1="22" x2="12" y2="15.5"></line>
+              <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+              <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+              <line x1="12" y1="2" x2="12" y2="8.5"></line>
+            </svg>
+            L’Étoile<span>.</span>
+          </a>
+          <p>High-end modern gastronomy meeting pixel-perfect Apple Sonoma styling. A true USA fine dining landmark.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram" style="width: 16px; height: 16px;"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook" style="width: 16px; height: 16px;"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter" style="width: 16px; height: 16px;"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Culinary Services</h4>
+          <ul class="footer-links">
+            <li><a href="#menu">Breakfast Menu</a></li>
+            <li><a href="#menu">Lunch Platters</a></li>
+            <li><a href="#menu">Dinner Course</a></li>
+            <li><a href="#menu">Desserts & Wine</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Exclusive Lounges</h4>
+          <ul class="footer-links">
+            <li><a href="#catering">Wedding Catering</a></li>
+            <li><a href="#catering">Corporate Gala</a></li>
+            <li><a href="#catering">Private Tasting</a></li>
+            <li><a href="#reservations">Lounge Booking</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Corporate Policies</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Agreement</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Dress Code Policy</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 L’Étoile Gastronomy LLC. Designed to H.I.G. specs. All rights reserved.</p>
+        <p>Manhattan, NY</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Gallery Modal -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close Lightbox">
+      <i data-lucide="x"></i>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Expanded View">
+    </div>
+  </div>
+
+  <!-- macOS Style Command Palette Modal -->
+  <div id="cmd-palette" class="cmd-palette">
+    <div class="cmd-palette-box">
+      <div class="cmd-input-wrapper">
+        <i data-lucide="search" style="width: 20px; height: 20px;"></i>
+        <input type="text" id="cmd-search-input" class="cmd-search-input" placeholder="Type a destination or request (e.g. Menu, Book)...">
+        <span class="cmd-shortcut-hint">ESC</span>
+      </div>
+      <div id="cmd-results" class="cmd-results">
+        <!-- Results insert dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Toast Notification Center -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Floating Reserve FAB Widget (Apple style indicator) -->
+  <button class="reserve-fab" onclick="document.getElementById('reservations').scrollIntoView({behavior: 'smooth'});" aria-label="Quick Booking Modal">
+    <i data-lucide="calendar"></i>
+  </button>
+
+  <!-- Script Logic -->
+  <script src="app.js"></script>
+  <script>
+    // Initialize all Lucide Icons in DOM
+    lucide.createIcons();
+
+    // GSAP ScrollTrigger Animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero Entry Transitions
+    gsap.from('.hero-title', { opacity: 0, y: 30, duration: 1.2, ease: 'power3.out' });
+    gsap.from('.hero-desc', { opacity: 0, y: 20, duration: 1.2, delay: 0.2, ease: 'power3.out' });
+    gsap.from('.hero-actions', { opacity: 0, y: 15, duration: 1.2, delay: 0.4, ease: 'power3.out' });
+    gsap.from('.hero-dish-img', { opacity: 0, scale: 0.9, duration: 1.5, ease: 'power3.out' });
+    gsap.from('.floating-glass-card', { opacity: 0, scale: 0.8, duration: 1.2, delay: 0.6, ease: 'power3.out', stagger: 0.2 });
+
+    // Scroll Reveal Staggered Cards animations
+    gsap.utils.toArray('.feature-card').forEach((card, index) => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        delay: index * 0.1,
+        ease: 'power2.out'
+      });
+    });
+
+    gsap.utils.toArray('.catering-card').forEach((card, index) => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 85%',
+        },
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        delay: index * 0.1,
+        ease: 'power2.out'
+      });
+    });
+  </script>
+</body>
+</html>
