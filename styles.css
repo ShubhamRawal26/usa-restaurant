@@ -4,28 +4,28 @@
   --font-primary: 'Cormorant Garamond', Georgia, serif;
   --font-secondary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   
-  /* Color Palette - Default Dark Theme */
-  --bg-primary: #0B1312;      /* Dark Travertine */
-  --bg-secondary: #152220;    /* Dark Sage */
-  --bg-glass: rgba(255, 255, 255, 0.08); /* Frosted glass */
-  --border-glass: rgba(255, 255, 255, 0.15); /* Bevel border */
-  --border-light: rgba(255, 255, 255, 0.08);
+  /* Color Palette - Default Bright Theme */
+  --bg-primary: #FAF9F5;      /* Travertine Alabaster */
+  --bg-secondary: #F0EDE6;    /* Soft Sandy Beige */
+  --bg-glass: rgba(255, 255, 255, 0.75); /* High visibility frosted glass */
+  --border-glass: rgba(255, 255, 255, 0.9); /* Premium bevel reflection border */
+  --border-light: rgba(15, 61, 59, 0.12); /* Gray border */
   
-  --color-text: #FAF9F5;      /* Light travertine text */
-  --color-text-secondary: #C5CECC; /* Slate-teal gray text */
+  --color-text: #0E1A19;      /* Crisp dark text */
+  --color-text-secondary: #405250; /* Muted text */
   --color-accent-gold: #C5A028; /* Warm Champagne Gold */
   --color-accent-gold-hover: #AA8717;
   --color-accent-orange: #D9531E;
   --color-accent-red: #A82424;
   --color-accent-green: #0F3D3B;
-  --bg-gradient: linear-gradient(135deg, #091D1B 0%, #152B28 50%, #071514 100%);
+  --bg-gradient: linear-gradient(135deg, #FAF9F5 0%, #F0EDE6 100%);
   
-  /* macOS Shadows & Realistic Glass Reflections */
+  /* macOS Sonoma/Sequoia Shadows & Realistic Glass Reflections */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.08);
   --shadow-mac: 0 30px 70px rgba(0, 0, 0, 0.12);
-  --shadow-glass-inset: inset 0 1px 1px rgba(255, 255, 255, 0.15); /* Bevel shine */
+  --shadow-glass-inset: inset 0 1px 1px rgba(255, 255, 255, 0.9); /* Bevel shine */
   --blur-glass: 25px; /* Deeper frosted blur */
   
   --radius-sm: 10px;
@@ -53,7 +53,7 @@ html {
 
 body {
   font-family: var(--font-secondary);
-  background-color: var(--bg-primary);
+  background: var(--bg-gradient) fixed;
   color: var(--color-text);
   line-height: 1.65;
   overflow-x: hidden;
@@ -289,7 +289,7 @@ a {
 }
 
 .nav-item a.active {
-  color: #0A0A0A;
+  color: var(--color-text);
   background: #FFFFFF;
   box-shadow: var(--shadow-sm);
 }
@@ -314,27 +314,28 @@ a {
 }
 
 .btn-primary {
-  background: #FFFFFF;
-  color: #0A0A0A;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  background: var(--color-text);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(10, 10, 10, 0.12);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
-  background: #F0F0F0;
+  box-shadow: 0 8px 24px rgba(10, 10, 10, 0.2);
+  background: var(--color-accent-green);
+  color: #FFFFFF;
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
-  color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--bg-glass);
+  color: var(--color-text);
+  border: 1px solid var(--border-glass);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-glass-inset), var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--bg-primary);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -687,9 +688,9 @@ a {
 }
 
 .menu-tab-btn.active {
-  background: #FFFFFF;
-  color: #0A0A0A;
-  border-color: #FFFFFF;
+  background: var(--color-text);
+  color: #FFFFFF;
+  border-color: var(--color-text);
   box-shadow: var(--shadow-sm);
 }
 
